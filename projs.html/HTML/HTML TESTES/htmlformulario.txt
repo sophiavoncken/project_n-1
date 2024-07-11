@@ -1,0 +1,35 @@
+<form>
+- tag para formulário
+- method post ou get
+- action indica o programa a ser executado após o submit
+
+<fieldset> 
+- cria uma moldura do formulário
+
+<legend>
+- cria um título para a moldura
+
+</fieldset>
+
+<label>
+- cria um título para o <input> e/ou para o <textarea>
+
+<select>
+- cria uma lista
+
+<option>
+- cria um item da lista
+
+</select>
+
+<input>
+- campo da tela, podendo ser text, radio, check, button 
+
+<textarea>
+- campo de tela ue permite varias linhas 
+
+- todos os tags devem estar entre as tags <form> e </form>
+
+</form>
+
+

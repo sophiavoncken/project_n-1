@@ -1,0 +1,29 @@
+<!doctype html>
+<body>
+    <fieldset>
+        <legend>Formulário de Contato</legend>
+            <form method="post" 
+                  action="formulario_resposta.php">
+                <p>Informe seus dados:</p>
+                <label>Seu nome:</label>
+                <input type="text" name="txt_nome"><br>
+                <label>Seu telefone:</label>
+                <input type="text" name="txt_telefone"><br>
+                <label>Sexo:</label><br>
+                <input type="radio" name="rb_sexo" value="M">Masculino&nbsp;
+                <input type="radio" name="rb_sexo" value="F">Feminino<br>
+                <label>Peeriodo de atendimento:</label>
+                <input type="check" name="CH_periodo" value="S">Semanal&nbsp;
+                <input type="check" name="CH_periodo" value="Q">Quinzenal<br>
+                <label>Seu turno:</label>
+                <select name="seu_turno">
+                    <option value="M">Manhã</option>
+                    <option value="T">Tarde</option>
+                    <option value="N">Noite</option>
+                </select>
+                <input type="submit" value="enviar">
+                <input type="reset" value="limpar">
+            </form>
+    </fieldset>
+</body>
+</html>

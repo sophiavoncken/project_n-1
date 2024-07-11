@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Acessibilidade via tabindex e accesskey</title>
+</head>
+<body>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <td valign="top">
+            <fieldset>
+            <legend>Informações Pessoais</legend>
+            <label for="txt_cpf">C<u>P</u>F:</label>
+            <input type="text" name="txt_cpf" size="11" maxlength="11" tabindex="1" accesskey="P" placeholder="Digite o CPF"/>
+            <br>
+            <label for="txt_nome">No<u>m</u>e:</label>
+            <input type="text" name="txt_nome" size="50" maxlength="50" tabindex="2" accesskey="M" placeholder="Digite o Nome"/>
+            </fieldset>
+        </td>
+        <td valign="top">
+            <fieldset>
+            <legend>Localização</legend>
+            <label for="txt_cep">C<u>E</u>P:</label>   
+            <input type="text" name="txt_cep" size="8" maxlength="8" tabindex="3" accesskey="E" placeholder="Digite o CEP"/>
+            <br>    
+            <label for="txt_numero">N<u>u</u>mero</label>
+            <input type="text" name="txt_numero" size="6" maxlength="6" tabindex="4" accesskey="U" placeholder="Digite o Numero"/>
+            <br>
+            <label for="txt_complemento">C<u>o</u>mplemento:</label>
+            <input type="text" name="txt_complemento" size="20" maxlength="20" tabindex="5" accesskey="O" placeholder="Digite o Complemento"/>
+            </fieldset>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            <fieldset>
+            <legend>Informações de Contato</legend>
+            <label for="txt_email">E-<u>m</u>ail:</label>
+            <input type="text" name="txt_email" size="50" maxlength="50" tabindex="6" accesskey="M" placeholder="Digite o mail"/>
+            <br>
+            <label for="txt_telefone"><u>T</u>elefone:</label>
+            <input type="text" name="txt_telefone" size="15" maxlength="15" tabindex="7" accesskey="T" placeholder="Digite o telefone"/>
+            <br>
+            <label for="txt_site"><u>S</u>ite Pessoal/Blog:</label>
+            <input type="text" name="txt_site" size="70" maxlength="70" tabindex="8" accesskey="S" placeholder="Digite o site"/>
+            <br>
+            <label for="txt_linkedin"><u>L</u>inkedin:</label>
+            <input type="text" name="txt_linkedin" size="70" maxlength="70" tabindex="9" accesskey="L" placeholder="Digite o linkedin"/>            
+            </fieldset>
+        </td>
+        <td valign="top">
+            <fieldset>
+            <legend>Informações Jurídicas</legend>
+            <label for="txt_titulo">T<u>i</u>tulo de Eleitor:</label>
+            <input type="text" name="txt_titulo" size="20" maxlength="20" tabindex="10" accesskey="I" placeholder="Digite o linkedin"/>            
+            </fieldset>
+        </td>
+    </tr>
+    </table>
+</body>
+</html>
