@@ -6,6 +6,8 @@ h1 {
     color: white;
     font-size: 60px;
     letter-spacing: 5px;
+    margin: 0;
+    padding: 0;
 }
 
 h2 a {
