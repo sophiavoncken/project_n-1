@@ -1,7 +1,7 @@
 
 /* #region CSS Padrão */
 
-/* Center the game on the page */
+/* Centraliza o jogo */
 h1 {
     color: white;
     font-size: 60px;
@@ -36,7 +36,7 @@ body {
     text-align: center;
 }
 
-/* Styling the game grid */
+/* Estilização da grade */
 table {
     margin: 20px auto;
     border-collapse: collapse;
@@ -55,7 +55,7 @@ img {
     cursor: pointer;
 }
 
-/* Controls styling */
+/* Estilização dos controles */
 .controls {
     margin-top: 20px;
 }
