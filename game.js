@@ -16,12 +16,12 @@ function playMove(id) {
 
       // Confere se a jogada resultou em vitoria, derrota ou empate
       if (checkWin()) {
-          setTimeout(() => alert(`Game Over: ${player} wins!`), 10);
+          setTimeout(() => alert(`Game Over: ${player} venceu!`), 10);
           return;
       }
 
       if (moves === 9) {
-          setTimeout(() => alert("Game Over: It's a draw!"), 10);
+          setTimeout(() => alert("Game Over: Deu velha!"), 10);
           return;
       }
 
