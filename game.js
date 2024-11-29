@@ -1,21 +1,20 @@
-// Initialize the player and move counter
+// Inicia o jogo
 let player = "X";
 let moves = 0;
 let isFirstCpuMove = true;
 
 /**
- * Handles a player's move when they click a cell.
- * @param {string} id - The ID of the clicked cell.
+ * Insere o simbolo escolhido no local onde o jogador clicou
  */
 function playMove(id) {
   const cell = document.getElementById(id);
 
-  // Only allow a move if the cell is empty
+    // Só permite o movimento se a table/espaço estiver vazio
   if (cell.src.includes("transp.png")) {
       cell.src = getPlayerImage(player); // Obtenha a imagem correta
       moves++;
 
-      // Check if the move resulted in a win or a draw
+      // Confere se a jogada resultou em vitoria, derrota ou empate
       if (checkWin()) {
           setTimeout(() => alert(`Game Over: ${player} wins!`), 10);
           return;
@@ -26,10 +25,10 @@ function playMove(id) {
           return;
       }
 
-      // Switch to the other player
+      // Troca o jogador
       player = player === "X" ? "O" : "X";
 
-      // If computer mode is enabled and it's the computer's turn, make a move
+      // Se o modo de jogar contra computador estiver ativado, o computador faz uma jogada
       if (document.getElementById("cpu").checked && player === "O") {
           if (isFirstCpuMove) {
               // Verifica se o meio (c5) está vazio
@@ -49,8 +48,8 @@ function playMove(id) {
 }
 
 /**
- * Checks if there is a winning combination on the board.
- * @returns {boolean} - True if a win is detected, otherwise false.
+ * Confere se existe uma combinação que leve a vitória
+ * @returns {boolean} - True se vitoria for detectada, se nao, false.
  */
 function checkWin() {
   const winPatterns = [
@@ -75,9 +74,9 @@ function checkWin() {
 }
 
 /**
- * Retrieves the image filename for a given cell.
- * @param {string} id - The ID of the cell.
- * @returns {string} - The filename of the image in the cell.
+ * Recupera o nome do arquivo de imagem para uma determinada célula.
+ * @param {string} id - o ID da celula.
+ * @returns {string} - Onome do file da imagem na celula.
  */
 function getImageSrc(id) {
   const src = document.getElementById(id).src;
@@ -85,8 +84,8 @@ function getImageSrc(id) {
 }
 
 /**
- * Finds the best move for the computer.
- * @returns {string} - The ID of the cell for the computer's move.
+ * Encontra a melhor jogada para o computador
+ * @returns {string} - o ID da celula para a jogada do computador.
  */
 function getBestMove() {
   const emptyCells = [];
@@ -96,32 +95,32 @@ function getBestMove() {
       }
   }
 
-  // Check for a winning move
+  // Procura por uma jogada que ira vencer o jogo
   for (const cell of emptyCells) {
-      document.getElementById(cell).src = getPlayerImage("O"); // Simulate computer's move
+      document.getElementById(cell).src = getPlayerImage("O"); // Simula a jogada do computador
       if (checkWin()) {
-          document.getElementById(cell).src = "img/transp.png"; // Undo move
-          return cell; // Return winning move
+          document.getElementById(cell).src = "img/transp.png"; // Desfaz jogada
+          return cell; // Volta a jogada vencedora
       }
-      document.getElementById(cell).src = "img/transp.png"; // Undo move
+      document.getElementById(cell).src = "img/transp.png"; // Desfaz jogada
   }
 
-  // Check for a blocking move
+  // Procura por uma jogada que ira bloquear oponente
   for (const cell of emptyCells) {
-      document.getElementById(cell).src = getPlayerImage("X"); // Simulate player's move
+      document.getElementById(cell).src = getPlayerImage("X"); // Simula a jogada do computador
       if (checkWin()) {
-          document.getElementById(cell).src = "img/transp.png"; // Undo move
-          return cell; // Return blocking move
+          document.getElementById(cell).src = "img/transp.png"; // Desfaz jogada
+          return cell; // Returna ao movimento de bloqueio
       }
-      document.getElementById(cell).src = "img/transp.png"; // Undo move
+      document.getElementById(cell).src = "img/transp.png"; // Desfaz jogada
   }
 
-  // If no winning or blocking move, return a random empty cell
+   // Se não houver movimento vencedor ou bloqueador, retorne uma célula vazia aleatória
   return emptyCells[Math.floor(Math.random() * emptyCells.length)];
 }
 
 /**
- * Resets the game to its initial state.
+ * Reseta o jogo
  */
 function resetGame() {
   for (let i = 1; i <= 9; i++) {
@@ -131,28 +130,6 @@ function resetGame() {
   moves = 0;
   isFirstCpuMove = true;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const images = {
     "one-piece": {
